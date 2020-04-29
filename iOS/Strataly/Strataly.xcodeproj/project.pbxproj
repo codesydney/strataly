@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C05DF9A2436EF2500144702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DF992436EF2500144702 /* AppDelegate.swift */; };
+		9C05DF9C2436EF2500144702 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DF9B2436EF2500144702 /* SceneDelegate.swift */; };
+		9C05DFA32436EF2800144702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C05DFA22436EF2800144702 /* Assets.xcassets */; };
+		9C05DFA62436EF2800144702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C05DFA42436EF2800144702 /* LaunchScreen.storyboard */; };
+		9C05DFB12436EF2800144702 /* StratalyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFB02436EF2800144702 /* StratalyTests.swift */; };
+		9C05DFBC2436EF8E00144702 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFBB2436EF8E00144702 /* Coordinator.swift */; };
+		9C05DFBE2436EFC100144702 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFBD2436EFC100144702 /* MainCoordinator.swift */; };
+		9C05DFC02436F06E00144702 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFBF2436F06E00144702 /* MainScreenVC.swift */; };
+		9C05DFC22436F47500144702 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFC12436F47500144702 /* LogoView.swift */; };
+		9C05DFC724371B5800144702 /* UIView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFC624371B5800144702 /* UIView_Extension.swift */; };
+		9C05DFC9243722A100144702 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05DFC8243722A100144702 /* UIColor_Extension.swift */; };
+		9C1F58CA24555F02002A23E8 /* UIImageView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F58C924555F02002A23E8 /* UIImageView_Extension.swift */; };
+		9C40C39C2453CE0F00090CA9 /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C40C39B2453CE0F00090CA9 /* SlideAnimator.swift */; };
+		9CB51C0D244EA0D800FE3914 /* UserIssuesScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C0C244EA0D800FE3914 /* UserIssuesScreenVC.swift */; };
+		9CB51C0F244EC09700FE3914 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C0E244EC09700FE3914 /* Random.swift */; };
+		9CE890A824429A4C00928EE5 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE890A724429A4C00928EE5 /* Entities.swift */; };
+		9CE890AA2442D83D00928EE5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE890A92442D83D00928EE5 /* LoginScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C05DFAD2436EF2800144702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C05DF8E2436EF2500144702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C05DF952436EF2500144702;
+			remoteInfo = Strataly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C05DF962436EF2500144702 /* Strataly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strataly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C05DF992436EF2500144702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C05DF9B2436EF2500144702 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9C05DFA22436EF2800144702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C05DFA52436EF2800144702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C05DFA72436EF2800144702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C05DFAC2436EF2800144702 /* StratalyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StratalyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C05DFB02436EF2800144702 /* StratalyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratalyTests.swift; sourceTree = "<group>"; };
+		9C05DFB22436EF2800144702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C05DFBB2436EF8E00144702 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C05DFBD2436EFC100144702 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9C05DFBF2436F06E00144702 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		9C05DFC12436F47500144702 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		9C05DFC624371B5800144702 /* UIView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_Extension.swift; sourceTree = "<group>"; };
+		9C05DFC8243722A100144702 /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		9C1F58C924555F02002A23E8 /* UIImageView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView_Extension.swift; sourceTree = "<group>"; };
+		9C40C39B2453CE0F00090CA9 /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
+		9CB51C0C244EA0D800FE3914 /* UserIssuesScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIssuesScreenVC.swift; sourceTree = "<group>"; };
+		9CB51C0E244EC09700FE3914 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		9CE890A724429A4C00928EE5 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		9CE890A92442D83D00928EE5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C05DF932436EF2500144702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C05DFA92436EF2800144702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C05DF8D2436EF2500144702 = {
+			isa = PBXGroup;
+			children = (
+				9C05DF982436EF2500144702 /* Strataly */,
+				9C05DFAF2436EF2800144702 /* StratalyTests */,
+				9C05DF972436EF2500144702 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C05DF972436EF2500144702 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C05DF962436EF2500144702 /* Strataly.app */,
+				9C05DFAC2436EF2800144702 /* StratalyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C05DF982436EF2500144702 /* Strataly */ = {
+			isa = PBXGroup;
+			children = (
+				9C40C39E2454FB3400090CA9 /* Coordinators */,
+				9CE890A624429A2D00928EE5 /* Model */,
+				9C40C39D2454FAFE00090CA9 /* Screens */,
+				9C05DFC524371B3700144702 /* Utils */,
+				9C05DF992436EF2500144702 /* AppDelegate.swift */,
+				9C05DF9B2436EF2500144702 /* SceneDelegate.swift */,
+				9C40C39B2453CE0F00090CA9 /* SlideAnimator.swift */,
+				9C05DFC12436F47500144702 /* LogoView.swift */,
+				9C05DFA22436EF2800144702 /* Assets.xcassets */,
+				9C05DFA42436EF2800144702 /* LaunchScreen.storyboard */,
+				9C05DFA72436EF2800144702 /* Info.plist */,
+			);
+			path = Strataly;
+			sourceTree = "<group>";
+		};
+		9C05DFAF2436EF2800144702 /* StratalyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C05DFB02436EF2800144702 /* StratalyTests.swift */,
+				9C05DFB22436EF2800144702 /* Info.plist */,
+			);
+			path = StratalyTests;
+			sourceTree = "<group>";
+		};
+		9C05DFC524371B3700144702 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C05DFC624371B5800144702 /* UIView_Extension.swift */,
+				9C05DFC8243722A100144702 /* UIColor_Extension.swift */,
+				9C1F58C924555F02002A23E8 /* UIImageView_Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9C40C39D2454FAFE00090CA9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9C05DFBF2436F06E00144702 /* MainScreenVC.swift */,
+				9CB51C0C244EA0D800FE3914 /* UserIssuesScreenVC.swift */,
+				9CE890A92442D83D00928EE5 /* LoginScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9C40C39E2454FB3400090CA9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9C05DFBB2436EF8E00144702 /* Coordinator.swift */,
+				9C05DFBD2436EFC100144702 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9CE890A624429A2D00928EE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CE890A724429A4C00928EE5 /* Entities.swift */,
+				9CB51C0E244EC09700FE3914 /* Random.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C05DF952436EF2500144702 /* Strataly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C05DFB52436EF2800144702 /* Build configuration list for PBXNativeTarget "Strataly" */;
+			buildPhases = (
+				9C05DF922436EF2500144702 /* Sources */,
+				9C05DF932436EF2500144702 /* Frameworks */,
+				9C05DF942436EF2500144702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Strataly;
+			productName = Strataly;
+			productReference = 9C05DF962436EF2500144702 /* Strataly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C05DFAB2436EF2800144702 /* StratalyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C05DFB82436EF2800144702 /* Build configuration list for PBXNativeTarget "StratalyTests" */;
+			buildPhases = (
+				9C05DFA82436EF2800144702 /* Sources */,
+				9C05DFA92436EF2800144702 /* Frameworks */,
+				9C05DFAA2436EF2800144702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C05DFAE2436EF2800144702 /* PBXTargetDependency */,
+			);
+			name = StratalyTests;
+			productName = StratalyTests;
+			productReference = 9C05DFAC2436EF2800144702 /* StratalyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C05DF8E2436EF2500144702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Gustavo Eulalio";
+				TargetAttributes = {
+					9C05DF952436EF2500144702 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					9C05DFAB2436EF2800144702 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9C05DF952436EF2500144702;
+					};
+				};
+			};
+			buildConfigurationList = 9C05DF912436EF2500144702 /* Build configuration list for PBXProject "Strataly" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C05DF8D2436EF2500144702;
+			productRefGroup = 9C05DF972436EF2500144702 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C05DF952436EF2500144702 /* Strataly */,
+				9C05DFAB2436EF2800144702 /* StratalyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C05DF942436EF2500144702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C05DFA62436EF2800144702 /* LaunchScreen.storyboard in Resources */,
+				9C05DFA32436EF2800144702 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C05DFAA2436EF2800144702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C05DF922436EF2500144702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CE890A824429A4C00928EE5 /* Entities.swift in Sources */,
+				9C05DFBC2436EF8E00144702 /* Coordinator.swift in Sources */,
+				9CB51C0F244EC09700FE3914 /* Random.swift in Sources */,
+				9CB51C0D244EA0D800FE3914 /* UserIssuesScreenVC.swift in Sources */,
+				9C05DFC22436F47500144702 /* LogoView.swift in Sources */,
+				9C05DF9A2436EF2500144702 /* AppDelegate.swift in Sources */,
+				9C40C39C2453CE0F00090CA9 /* SlideAnimator.swift in Sources */,
+				9C05DFBE2436EFC100144702 /* MainCoordinator.swift in Sources */,
+				9C05DFC9243722A100144702 /* UIColor_Extension.swift in Sources */,
+				9C05DF9C2436EF2500144702 /* SceneDelegate.swift in Sources */,
+				9C05DFC724371B5800144702 /* UIView_Extension.swift in Sources */,
+				9CE890AA2442D83D00928EE5 /* LoginScreen.swift in Sources */,
+				9C1F58CA24555F02002A23E8 /* UIImageView_Extension.swift in Sources */,
+				9C05DFC02436F06E00144702 /* MainScreenVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C05DFA82436EF2800144702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C05DFB12436EF2800144702 /* StratalyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C05DFAE2436EF2800144702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C05DF952436EF2500144702 /* Strataly */;
+			targetProxy = 9C05DFAD2436EF2800144702 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C05DFA42436EF2800144702 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C05DFA52436EF2800144702 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C05DFB32436EF2800144702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C05DFB42436EF2800144702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C05DFB62436EF2800144702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = Strataly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.Strataly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9C05DFB72436EF2800144702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = Strataly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.Strataly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9C05DFB92436EF2800144702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strataly.app/Strataly";
+			};
+			name = Debug;
+		};
+		9C05DFBA2436EF2800144702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strataly.app/Strataly";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C05DF912436EF2500144702 /* Build configuration list for PBXProject "Strataly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C05DFB32436EF2800144702 /* Debug */,
+				9C05DFB42436EF2800144702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C05DFB52436EF2800144702 /* Build configuration list for PBXNativeTarget "Strataly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C05DFB62436EF2800144702 /* Debug */,
+				9C05DFB72436EF2800144702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C05DFB82436EF2800144702 /* Build configuration list for PBXNativeTarget "StratalyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C05DFB92436EF2800144702 /* Debug */,
+				9C05DFBA2436EF2800144702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C05DF8E2436EF2500144702 /* Project object */;
+}
