@@ -1,4 +1,6 @@
 <script>
+import './style.scss'
+
 export default {
   name: 'Navbar'
 }
@@ -6,6 +8,6 @@ export default {
 
 <template>
   <div class="navbar">
-    <h1>THIS IS THE NAVBAR</h1>
+    <div>THIS IS THE NAVBAR</div>
   </div>
 </template>
