@@ -1,0 +1,22 @@
+// Breakpoints
+// -------------------
+$breakpoints: (
+  'short': (
+    max-height: 768px
+  ),
+  'tall': (
+    min-height: 1000px
+  ),
+  'mobile': (
+    max-width: 768px
+  ),
+  'tablet': (
+    max-width: 1024px
+  ),
+  'desktop': (
+    min-width: 1200px
+  ),
+  'display': (
+    min-width: 1800px
+  )
+);

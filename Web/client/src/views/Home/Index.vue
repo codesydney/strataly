@@ -2,10 +2,12 @@
 import './style.scss'
 
 export default {
-  name: 'Navbar'
+  name: 'Home'
 }
 </script>
 
 <template>
-  <div>THIS IS THE NAVBAR COMPONENT</div>
+  <div class="home">
+    <h1>This is the home page</h1>
+  </div>
 </template>
