@@ -28,3 +28,27 @@ $breakpoints: (
     min-width: 1800px
   )
 );
+
+// Breakpoints Grid Settings
+// -------------------
+$grid-settings: (
+  base: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 980px
+  ),
+  desktop: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 1120px
+  ),
+  tablet: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 760px
+  ),
+  mobile: (
+    container-columns: 1,
+    gutter: 5%
+  )
+);
