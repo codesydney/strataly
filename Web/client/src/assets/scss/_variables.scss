@@ -1,3 +1,11 @@
+// Colours
+$systemBackground: #ffffff;
+$secondarySystemBackground: #f2f2f7;
+$label: #000000;
+$secondaryLable: #3c3c43;
+$lightGray: #aaaaaa;
+$darkGray: #555555;
+
 // Breakpoints
 // -------------------
 $breakpoints: (
@@ -18,5 +26,29 @@ $breakpoints: (
   ),
   'display': (
     min-width: 1800px
+  )
+);
+
+// Breakpoints Grid Settings
+// -------------------
+$grid-settings: (
+  base: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 980px
+  ),
+  desktop: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 1120px
+  ),
+  tablet: (
+    container-columns: 12,
+    gutter: 2%,
+    max-width: 760px
+  ),
+  mobile: (
+    container-columns: 12,
+    gutter: 5%
   )
 );
