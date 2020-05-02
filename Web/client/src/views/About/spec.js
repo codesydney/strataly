@@ -2,7 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import Vuetify from 'vuetify'
 import Vue from 'vue'
 Vue.use(Vuetify)
-import Home from './Index.vue'
+import About from './Index.vue'
 const localVue = createLocalVue()
 
 describe('CustomCard.vue', () => {
@@ -13,7 +13,7 @@ describe('CustomCard.vue', () => {
   })
 
   it('should have a custom title and match snapshot', () => {
-    const wrapper = mount(Home, {
+    const wrapper = mount(About, {
       localVue,
       vuetify,
       mocks: {
