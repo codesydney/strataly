@@ -6,8 +6,24 @@ Vue.use(Vuetify)
 import Navbar from './Index.vue'
 
 const localVue = createLocalVue()
+
 localVue.use(VueRouter)
-const router = new VueRouter()
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home'
+    // component: Home
+  },
+  {
+    path: '/about-us',
+    name: 'About'
+    // component: About
+  }
+]
+
+const router = new VueRouter({ routes })
+
 describe('CustomCard.vue', () => {
   let vuetify
 
