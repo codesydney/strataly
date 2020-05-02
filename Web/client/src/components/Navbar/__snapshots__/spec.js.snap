@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomCard.vue should have a custom title and match snapshot 1`] = `
+<div>
+  <header class="navbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height: 48px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;">
+    <div class="v-toolbar__content" style="height: 48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default" style="display: none;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button> <img src="" class="nav-logo">
+      <div class="v-toolbar__items hidden-xs-only"><a href="#/" class="mr-5 v-btn--active v-btn v-btn--flat v-btn--router v-btn--text theme--dark v-size--default"><span class="v-btn__content">Home</span></a><a href="#/" class="mr-5 v-btn--active v-btn v-btn--flat v-btn--router v-btn--text theme--dark v-size--default"><span class="v-btn__content">About</span></a></div>
+      <div class="spacer"></div>
+    </div>
+  </header>
+  <nav class="v-navigation-drawer v-navigation-drawer--absolute v-navigation-drawer--close v-navigation-drawer--is-mobile v-navigation-drawer--temporary theme--dark" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 256px;" deep-purple="" accent-4="" dense="">
+    <div class="v-navigation-drawer__content">
+      <div tabindex="-1" class="v-list-item theme--dark">
+        <div class="v-list-item__content">
+          <div class="v-list-item__title title text-center">Strataly</div>
+          <div class="v-list-item__subtitle text-center">CodeSydney</div>
+        </div>
+      </div>
+      <hr role="separator" aria-orientation="horizontal" class="v-divider theme--dark">
+      <div class="v-list v-sheet v-sheet--tile theme--dark v-list--nav"><a href="#/" class="v-list-item--active v-list-item v-list-item--link theme--dark" tabindex="0">
+          <div class="v-list-item__content">
+            <div class="v-list-item__title text-center subtitle-2">
+              Home
+            </div>
+          </div>
+        </a><a href="#/" class="v-list-item--active v-list-item v-list-item--link theme--dark" tabindex="0">
+          <div class="v-list-item__content">
+            <div class="v-list-item__title text-center subtitle-2">
+              About
+            </div>
+          </div>
+        </a></div>
+    </div>
+    <div class="v-navigation-drawer__border"></div>
+  </nav>
+</div>
+`;
