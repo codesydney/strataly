@@ -27,17 +27,11 @@ export default {
 <template>
   <div>
     <v-app-bar class="navbar" dense :dark="dark" app>
-      <v-app-bar-nav-icon
-        @click="drawer = true"
-        v-show="$vuetify.breakpoint.xsOnly"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = true" v-show="$vuetify.breakpoint.xsOnly"></v-app-bar-nav-icon>
 
       <img class="nav-logo" :src="logo" />
 
-      <v-toolbar-items
-        class="hidden-xs-only"
-        v-show="!$vuetify.breakpoint.xsOnly"
-      >
+      <v-toolbar-items class="hidden-xs-only" v-show="!$vuetify.breakpoint.xsOnly">
         <v-btn
           text
           v-for="item in navItems"
@@ -45,8 +39,7 @@ export default {
           :to="{ name: item.url }"
           exact
           class="mr-5"
-          >{{ item.title }}</v-btn
-        >
+        >{{ item.title }}</v-btn>
       </v-toolbar-items>
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -63,12 +56,8 @@ export default {
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title text-center"
-            >Strataly</v-list-item-title
-          >
-          <v-list-item-subtitle class="text-center"
-            >CodeSydney</v-list-item-subtitle
-          >
+          <v-list-item-title class="title text-center">Strataly</v-list-item-title>
+          <v-list-item-subtitle class="text-center">CodeSydney</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -83,14 +72,10 @@ export default {
           link
         >
           <v-list-item-content>
-            <v-list-item-title class="text-center subtitle-2">
-              {{ item.title }}
-            </v-list-item-title>
+            <v-list-item-title class="text-center subtitle-2">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
 </template>
-
-<style lang="sass" scoped></style>
