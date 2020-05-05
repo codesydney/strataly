@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomCard.vue should have a custom title and match snapshot 1`] = `
+<div class="home">
+  <h1>This is the home page Woohoo!!</h1>
+</div>
+`;

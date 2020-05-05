@@ -1,3 +1,8 @@
-.navbar {
-  color: purple;
+@import '../../assets/scss/includes.scss';
+
+.nav-logo {
+  width: 150px;
+  height: 48px;
+  background: $systemBackground;
+  margin: 0 20px;
 }
