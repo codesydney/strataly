@@ -1,13 +1,13 @@
 <script>
 import './style.scss'
 import logo from '../../assets/img/strataly-logo.svg'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Navbar',
   data() {
     return {
       drawer: false,
-      dark: true,
       logo,
       navItems: [
         {
@@ -20,20 +20,23 @@ export default {
         }
       ]
     }
-  }
+  },
+  computed: mapState({
+    isMobile: state => state.isMobile
+  })
 }
 </script>
 
 <template>
   <div>
-    <v-app-bar class="navbar" dense :dark="dark" app>
+    <v-app-bar :dark="isMobile" class="navbar" dense app>
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-show="$vuetify.breakpoint.xsOnly"
       ></v-app-bar-nav-icon>
 
-      <img class="nav-logo" :src="logo" />
-
+      <img class="nav-logo" :src="logo" v-if="!isMobile" />
+      <v-spacer></v-spacer>
       <v-toolbar-items
         class="hidden-xs-only"
         v-show="!$vuetify.breakpoint.xsOnly"
@@ -48,7 +51,6 @@ export default {
           >{{ item.title }}</v-btn
         >
       </v-toolbar-items>
-      <v-spacer></v-spacer>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -59,7 +61,7 @@ export default {
       deep-purple
       accent-4
       dense
-      :dark="dark"
+      :dark="isMobile"
     >
       <v-list-item>
         <v-list-item-content>
