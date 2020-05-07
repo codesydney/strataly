@@ -16,7 +16,7 @@ ENDPOINTS:
 			strata_plan_id, 
 			strata_name, 
 			strata_address,
-        	office_address, 
+        		office_address, 
 			office_email
 		
 		Get all strata - /API/strata
@@ -25,7 +25,7 @@ ENDPOINTS:
 		Delete strata - DELETE /API/strata:strata_plan_id
 
 	users:
-		/API/users
+		Get all users - /API/users
 
 cURL:
 	A utility that will allow you to perform POST, PUT & DELETE from
