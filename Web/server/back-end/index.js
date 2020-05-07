@@ -18,7 +18,6 @@
  * Includes *
  ************/
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 
 const db = require('./queries');
@@ -33,16 +32,8 @@ const PORT = process.env.PORT || 3000;
 /****************
  * Server Setup *
  ****************/
-//set app to use bodyParser middleware to parse only JSON payloads
-app.use(bodyParser.json());
-
-//set bodyParser to use the extended qs library
-//https://www.npmjs.com/package/qs#readme
-app.use(
-    bodyParser.urlencoded({
-        extended: true
-    })
-);
+//set app to parse only JSON payloads
+app.use(express.json({ extended: true}));
 
 /***********
  * Routing *

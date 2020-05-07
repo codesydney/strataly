@@ -8,7 +8,7 @@ To run back-end server:
 	2. Run the following command:
 		node index.js
 	'or' for liveloading when updating code:
-		nodemon index.js
+		npx nodemon index.js
 
 ENDPOINTS:
 	strata:
