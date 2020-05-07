@@ -1,0 +1,30 @@
+Strataly
+
+ROLES
+=====
+
+Strataly administrator:
+- CRUD stratas
+- CRUD users
+- create strata and first strata user (EC role)
+
+Executive Committee:
+- CRUD users to the strata linked to them
+- edit certain strata details
+- CRUD issues to the strata linked to them
+
+Strata Manager: 
+- CRUD users to the strata linked to them
+- CRUD issues to the strata linked to them
+
+Building Manager:
+- CRUD issues to the strata linked to them
+
+Owner:
+- CRUD issues to the strata linked to them
+
+Tenant:
+- CRUD issues to the unit linked to them
+
+Unauthorized
+- no privileges
