@@ -1,5 +1,6 @@
 <script>
 import Navbar from '@/components/Navbar/Index.vue'
+//import Footer from '@/components/Footer/Index.vue'
 import './App.scss'
 
 export default {
@@ -19,7 +20,7 @@ export default {
   methods: {
     onResize() {
       const value = (this.isMobile = window.innerWidth < 600)
-      //this.$vuetify.theme.dark = value
+      this.$vuetify.theme.dark = value
       this.$store.dispatch('updateIsMobile', value)
     }
   },

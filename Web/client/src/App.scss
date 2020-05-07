@@ -1,5 +1,10 @@
 @import './assets/scss/includes.scss';
 
+//Global background color from the custom theme color in veutify.js
+.v-application {
+  background-color: var(--v-background-base) !important;
+}
+
 a {
   text-decoration: none;
 }

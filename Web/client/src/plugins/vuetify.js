@@ -6,7 +6,12 @@ Vue.use(Vuetify)
 const vuetify = new Vuetify({
   theme: {
     themes: {
-      dark: {}
+      dark: {
+        background: '#030303'
+      }
+    },
+    options: {
+      customProperties: true
     }
   }
 })
