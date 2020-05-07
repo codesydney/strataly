@@ -21,7 +21,7 @@ export default {
   computed: {
     emailErrors() {
       const errors = []
-      if (!this.clickedSubmit) return [] // Return errors only when for is submitted
+      //if (!this.clickedSubmit) return [] // Return errors only when for is submitted
       if (!this.$v.email.$dirty) return errors //Return errors only when the field becomes dirty
       !this.$v.email.email && errors.push('Must be valid e-mail') //Push this error when the 'email' validation fails
       !this.$v.email.required && errors.push('E-mail is required')
@@ -29,7 +29,7 @@ export default {
     },
     passwordErrors() {
       const errors = []
-      if (!this.clickedSubmit) return []
+      //if (!this.clickedSubmit) return []
       if (!this.$v.password.$dirty) return errors
       !this.$v.password.required && errors.push('Password is required')
       !this.$v.password.minLength && errors.push('Too Short!!!')
