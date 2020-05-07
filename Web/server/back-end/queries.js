@@ -8,9 +8,7 @@
  */
 
 const _pool = require('pg').Pool;
-//FIXME: This is crazy insecure. Do something about the DB user + password
-//          before sending it to everyone. If I forgot to fix this, 
-//          I'm sorry everyone!
+
 const pool = new _pool({
     user: 'xpress_server',
     host: 'localhost',
