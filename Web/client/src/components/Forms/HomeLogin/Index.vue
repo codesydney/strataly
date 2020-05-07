@@ -6,17 +6,17 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
 export default {
   name: 'HomeLogin',
   mixins: [validationMixin],
-  validations: {
-    email: { required, email },
-    password: { required, minLength: minLength(5) }
-  },
+
   data() {
     return {
       email: '',
       password: '',
-      clickedSubmit: false,
-      validationState: 'invalid'
+      clickedSubmit: false
     }
+  },
+  validations: {
+    email: { required, email },
+    password: { required, minLength: minLength(5) }
   },
   computed: {
     emailErrors() {
