@@ -15,6 +15,10 @@ export default {
           url: 'Home'
         },
         {
+          title: 'Register-User',
+          url: 'RegisterNewUser'
+        },
+        {
           title: 'About',
           url: 'About'
         }
