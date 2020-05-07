@@ -9,6 +9,7 @@
 
 const _pool = require('pg').Pool;
 
+//config
 const pool = new _pool({
     user: 'xpress_server',
     host: 'localhost',
@@ -29,7 +30,7 @@ const createStrata = (req, res) => {
         office_address, office_email], (err, results) => {
         
         if (err){
-            throw err;
+            next();
         };
 
         res.status(201).send('Strata added');
