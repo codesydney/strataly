@@ -21,7 +21,7 @@
                 dummy_data.sql & replace the backslashes.
                     postgres=# \i 'c:/.../Scripts/dummy_data.sql'
 
-                'D:/Users/Workspace/strataly/Database/Scripts/dummy_data.sql'
+                'D:/Users/Workspace/strataly/Web/server/database/Scripts/dummy_data.sql'
 */
 
 -- NOTE: Data needs to be added in dependency order, e.g. strata -> user
@@ -37,6 +37,6 @@ INSERT INTO strataly_schema.strata (strata_plan_id, strata_name, strata_address,
 --POPULATE users
 INSERT INTO strataly_schema.users (user_id, user_email, user_password, user_name, strata, unit, user_role)(
     VALUES
-    (DEFAULT, 'user@email.com', 'usr password', 'Mike Mikenton', '1', 1, 'owner'),
-    (DEFAULT, 'second@email.com', 'seconds password', 'greg gregington', '1', 2, 'owner')
+    (DEFAULT, 'user@email.com', 'usr password', 'Mike Mikenton', '1', 1, 0),
+    (DEFAULT, 'second@email.com', 'seconds password', 'greg gregington', '1', 2, 1)
 );

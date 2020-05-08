@@ -45,8 +45,7 @@
                 init.sql & replace the backslashes.
                     postgres=# \i 'c:/.../Scripts/init.sql'
 
-                    'D:/Users/Workspace/strataly/Database/Scripts/init.sql'
-        
+                    'D:/Users/Workspace/strataly/Web/server/database/Scripts/init.sql'
         6. Enjoy!
 
 
@@ -78,12 +77,6 @@ CREATE TABLE IF NOT EXISTS strataly_schema.strata(
     office_email TEXT --CHECK()
 );
 
--- CREATE roles table
-CREATE TABLE IF NOT EXISTS strataly_schema.roles(
-    role_name TEXT PRIMARY KEY CHECK(role_name IN ('owner', 'strata manager', 'building manager', 'tenant')),
-    role_description TEXT NOT NULL
-);
-
 -- CREATE users table
     -- TODO: email needs a CHECK constraint
     -- TODO: user_password needs some kind of encryption
@@ -94,8 +87,10 @@ CREATE TABLE IF NOT EXISTS strataly_schema.users(
     user_password TEXT NOT NULL,
     user_name TEXT,
     strata TEXT NOT NULL REFERENCES strataly_schema.strata(strata_plan_id),
-    unit INTEGER NOT NULL,
-    user_role TEXT NOT NULL REFERENCES strataly_schema.roles(role_name)
+    unit TEXT NOT NULL,
+    user_role INTEGER NOT NULL CHECK(user_role >= 0 AND user_role <= 4),
+    user_status INTEGER NOT NULL,
+    creation_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
 -- CREATE issues table
@@ -104,7 +99,7 @@ CREATE TABLE IF NOT EXISTS strataly_schema.issues(
     issue_title TEXT NOT NULL,
     issue_description TEXT NOT NULL,
     user_id INTEGER NOT NULL REFERENCES strataly_schema.users(user_id),
-    issue_status TEXT NOT NULL CHECK(issue_status IN ('submitted', 'accepted', 'addressing', 'closed', 'rejected')) DEFAULT 'submitted',
+    issue_status INTEGER NOT NULL,
     create_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -127,17 +122,6 @@ CREATE TABLE IF NOT EXISTS strataly_schema.issue_files(
     user_id INTEGER NOT NULL REFERENCES strataly_schema.users(user_id),
     issue_number INTEGER NOT NULL REFERENCES strataly_schema.issues(issue_number),
     upload_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
-);
-
-
--- POPULATE static table, i.e. strataly_schema.roles
-    -- 
-INSERT INTO strataly_schema.roles (role_name, role_description)(
-    VALUES 
-    ('owner', 'The owner of the property'),
-    ('strata manager', 'The manager of the strata'),
-    ('building manager', 'The building manager'),
-    ('tenant', 'the current tenant of a unit')
 );
 
 -- CREATE user 'xpress_server'. This user account is used by
