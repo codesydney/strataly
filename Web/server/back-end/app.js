@@ -11,8 +11,8 @@ const mountRoutes = require('./routes');
 const app = express();
 
 //PORT NUMBER
-// Gets port number from environment or use 3000 by default
-const PORT = process.env.PORT || 3000;
+// Gets port number from environment or use 5000 by default
+const PORT = process.env.PORT || 5000;
 
 /**
  * Server Setup
