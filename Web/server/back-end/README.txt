@@ -6,9 +6,9 @@ Setup:
 To run back-end server:
 	1. Open a terminal and navigate to the 'Back-end' folder
 	2. Run the following command:
-		node index.js
-	'or' for liveloading when updating code:
-		npx nodemon index.js
+		npm start
+	'or' for liveloading w/ nodemon:
+		npm run devstart
 
 ENDPOINTS:
 	strata:
@@ -32,7 +32,7 @@ cURL:
 	the command line. 
 
 	POST:
-curl --data "strata_plan_id=3&strata_name=strata3&strata_address=3stratastreet&office_address=3officestreet&office_email=office@email.com" http://localhost:5000/api/strata
+curl --data "strata_plan_id=3&strata_name=strata3&strata_address=3stratastreet&office_address=3officestreet&office_email=office@email.com" http://localhost:3000/api/strata
 
 	DELETE:
-curl -X "DELETE" http://localhost:5000/api/strata/3
+curl -X "DELETE" http://localhost:3000/api/strata/3

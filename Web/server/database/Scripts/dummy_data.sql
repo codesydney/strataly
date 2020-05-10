@@ -35,8 +35,8 @@ INSERT INTO strataly_schema.strata (strata_plan_id, strata_name, strata_address,
 );
 
 --POPULATE users
-INSERT INTO strataly_schema.users (user_id, user_email, user_password, user_name, strata, unit, user_role)(
+INSERT INTO strataly_schema.users (user_id, user_email, user_password, user_name, strata, unit, user_role, user_status)(
     VALUES
-    (DEFAULT, 'user@email.com', 'usr password', 'Mike Mikenton', '1', 1, 0),
-    (DEFAULT, 'second@email.com', 'seconds password', 'greg gregington', '1', 2, 1)
+    (DEFAULT, 'user@email.com', 'usr password', 'Mike Mikenton', '1', 1, 1, 1),
+    (DEFAULT, 'second@email.com', 'seconds password', 'greg gregington', '1', 2, 1, 2)
 );

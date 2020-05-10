@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS strataly_schema.users(
     user_name TEXT,
     strata TEXT NOT NULL REFERENCES strataly_schema.strata(strata_plan_id),
     unit TEXT NOT NULL,
-    user_role INTEGER NOT NULL CHECK(user_role >= 0 AND user_role <= 4),
+    user_role INTEGER NOT NULL CHECK(user_role >= 1 AND user_role <= 5),
     user_status INTEGER NOT NULL,
     creation_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
