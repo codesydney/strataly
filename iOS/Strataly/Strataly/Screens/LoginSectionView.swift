@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginScreen: UIView
+class LoginSectionView: UIView
 {
 	let emailTextField = UITextField()
 	let passwordTextField = UITextField()

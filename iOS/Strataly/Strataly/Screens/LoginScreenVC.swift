@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MainScreenVC: UIViewController
+class LoginScreenVC: UIViewController
 {
-	var coordinator: MainCoordinator?
+	var coordinator: LoginCoordinator?
 	
 	private var block = UIView()
 	private var logo = LogoView(color: .mainScreenTitle)
@@ -32,7 +32,7 @@ class MainScreenVC: UIViewController
 		
 		var loginScreenFrame = view.bounds
 		loginScreenFrame.origin = CGPoint(x: 0, y: 182)
-		let loginScreen = LoginScreen(frame: loginScreenFrame, loginAction: loginTapped)
+		let loginScreen = LoginSectionView(frame: loginScreenFrame, loginAction: loginTapped)
 		view.addSubview(loginScreen)
 		loginScreen.translatesAutoresizingMaskIntoConstraints = false
 		
@@ -58,8 +58,8 @@ class MainScreenVC: UIViewController
 		view.setBackground(colors: [.backgroundSkyLight, .backgroundSkyDark], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 0, y: 0.2))
 	}
 	
-	func loginTapped(_ userName: String, _ password: String)
+	func loginTapped(_ email: String, _ password: String)
 	{
-		coordinator?.login(userName: userName, password: password)
+		coordinator?.login(email: email, password: password)
 	}
 }

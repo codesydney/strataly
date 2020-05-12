@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
+class LoginCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 {
 	var children = [Coordinator]()
 	var navigationController: UINavigationController
@@ -24,16 +24,15 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 		
 		if loggedIn
 		{
-			vc = UserIssuesScreenVC()
-			(vc as! UserIssuesScreenVC).coordinator = self
+			login(email: "", password: "")
 		} else {
-			vc = MainScreenVC()
-			(vc as! MainScreenVC).coordinator = self
+			vc = LoginScreenVC()
+			(vc as! LoginScreenVC).coordinator = self
+			navigationController.delegate = self
+			navigationController.isNavigationBarHidden = true
+			navigationController.pushViewController(vc, animated: false)
 		}
 		
-		navigationController.delegate = self
-		navigationController.isNavigationBarHidden = true
-		navigationController.pushViewController(vc, animated: false)
 	}
 	
 	func dismissCurrentScreen()
@@ -41,20 +40,18 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 		navigationController.popViewController(animated: true)
 	}
 	
-	func login(userName: String, password: String)
+	func login(email: String, password: String)
 	{
-		print("user name: \(userName)")
-		print("password: \(password)")
-		let vc = UserIssuesScreenVC()
-		vc.coordinator = self
-		
-		navigationController.pushViewController(vc, animated: true)
+		let child = MainScreenCoordinator(navController: navigationController)
+		children.append(child)
+		child.setup()
 	}
 	
 	// MARK: - UINavigationControllerDelegate
 	func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?
 	{
-		if let _ = fromVC as? MainScreenVC {
+		if let _ = fromVC as? LoginScreenVC
+		{
 			switch operation {
 			case .push:
 				return SlideAnimator(duration: TimeInterval(UINavigationController.hideShowBarDuration * 2), pushing: true)
