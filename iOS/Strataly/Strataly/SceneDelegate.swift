@@ -10,7 +10,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate
 {
-	var coordinator: MainCoordinator?
+	var coordinator: LoginCoordinator?
 	var window: UIWindow?
 	
 	
@@ -19,11 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
 		let navController = UINavigationController()
-		coordinator = MainCoordinator.init(navigationController: navController)
+		coordinator = LoginCoordinator.init(navigationController: navController)
 		coordinator?.setup()
 		
 		window = UIWindow(frame: windowScene.coordinateSpace.bounds)
 		window?.windowScene = windowScene
+		window?.overrideUserInterfaceStyle = .dark
 		window?.rootViewController = navController
 		window?.makeKeyAndVisible()
 	}

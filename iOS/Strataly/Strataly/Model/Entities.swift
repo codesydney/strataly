@@ -25,12 +25,29 @@ class Strata: Codable
 	}
 }
 
-class Role: Codable
+enum Role: Int, Codable
 {
-	var name: String
-	var description: String?
+	case unauthorized = 0
+	case admin
+	case executiveCommittee
+	case strataManager
+	case buildingManager
+	case owner
+	case tenant
 	
-	init(name: String) { self.name = name }
+	var name: String
+	{
+		switch self
+		{
+		case .admin: return "Strataly Administrator"
+		case .executiveCommittee: return "Executive Committee"
+		case .strataManager: return "Strata Manager"
+		case .buildingManager: return "Building Manager"
+		case .owner: return "Owner"
+		case .tenant: return "Tenant"
+		default: return "Unauthorized"
+		}
+	}
 }
 
 class User: Codable
@@ -54,22 +71,32 @@ class User: Codable
 
 class Issue: Codable
 {
-	let issueId: Int
+	var issueId: Int?
 	var title: String
-	var description: String
-	var user: User
-	var status: String // IssueStatus?
-	let creationTime: Date
-	var lastUpdate: Date
+	var description: String?
+	var user: User?
+	var status: String? // IssueStatus?
+	let creationTime: Date?
+	var lastUpdate: Date?
+	var comments: [IssueComment]?
+	var files: [IssueFile]?
+	
+	init(title: String)
+	{
+		self.title = title
+		creationTime = Date()
+	}
 }
 
 class IssueComment: Codable
 {
 	var commentId: Int
-	let issue: Issue
-	var user: User
+	weak var issue: Issue
+	weak var user: User
 	var comment: String
 	var commentTime: Date
+	
+	
 }
 
 class IssueFile: Codable
@@ -77,7 +104,7 @@ class IssueFile: Codable
 	let fileId: Int
 	let description: String
 	let fileData: Data
-	let user: User
-	let issue: Issue
+	weak let user: User
+	weak let issue: Issue
 	let uploadTime: Date
 }

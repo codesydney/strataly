@@ -10,11 +10,12 @@ import UIKit
 
 class UserIssuesScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-	var coordinator: MainCoordinator?
+	var coordinator: MainScreenCoordinator?
 	
 	var issueTableView: UITableView!
 	
 	var user: User!
+	var issues: [Issue]!
 	
     override func viewDidLoad()
 	{
@@ -22,6 +23,8 @@ class UserIssuesScreenVC: UIViewController, UITableViewDelegate, UITableViewData
 		view.backgroundColor = .black
 		
 		user = User.random()
+		issues = user.fetchIssues()
+		
 		let logo = LogoView(color: .label, height: 50)
 		let userNameLabel = UILabel()
 		let userEmailLabel = UILabel()
@@ -99,19 +102,21 @@ class UserIssuesScreenVC: UIViewController, UITableViewDelegate, UITableViewData
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
-		10
+		issues.count
 	}
 	
 	// TODO: - Show some real content
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-		{
-			cell.textLabel?.text = "Issue \(indexPath.row) - Unit \(Int.random(in: 1...99))'s \(["broken door", "rubbish placing", "garage", "maintenance", "pipe work", "parking problem"].randomElement() ?? "problem")"
-			cell.backgroundColor = .secondarySystemBackground
-			return cell
-		} else {
-			return UITableViewCell()
-		}
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { fatalError() }
+		
+		cell.textLabel?.text = issues[indexPath.row].title
+		cell.backgroundColor = .secondarySystemBackground
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+	{
+		coordinator?.issueSelected(issues[indexPath.row])
 	}
 }

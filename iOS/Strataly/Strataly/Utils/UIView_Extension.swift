@@ -22,7 +22,6 @@ extension UIView
 		// Remove current gradient sublayer
 		if let subLayers = layer.sublayers
 		{
-			print("There are sublayers")
 			for subLayer in subLayers
 			{
 				if let subLayer = subLayer as? CAGradientLayer
