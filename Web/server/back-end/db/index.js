@@ -1,17 +1,17 @@
-//Database Access
+// /**
+//  * Database Access
+//  */
 const { Pool } = require('pg');
 
-//TODO: Move connection info to dotenv
+//get connection string from process.env
+const connString = process.env.DATABASE_URL;
+
+//create new connection pool
 const pool = new Pool({
-    user: 'xpress_server',
-    host: 'localhost',
-    database: 'strataly',
-    password: 'password',
-    port: '5432'
+    connectionString: connString
 });
 
+//Export template for routes to connect to idle connection
 module.exports = {
-    query: (text, params, callback) => {
-        return pool.query(text, params, callback);
-    }
+    query: (text, params) => pool.query(text, params)
 };
