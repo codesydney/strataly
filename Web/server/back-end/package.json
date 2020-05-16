@@ -14,9 +14,10 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-promise-router": "^3.0.3",
-    "pg": "^8.1.0"
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   }
 }
