@@ -25,32 +25,14 @@ class UserIssuesScreenVC: UIViewController, UITableViewDelegate, UITableViewData
 		user = User.random()
 		issues = user.fetchIssues()
 		
-		let logo = LogoView(color: .label, height: 50)
-		let userNameLabel = UILabel()
-		let userEmailLabel = UILabel()
-		let userRoleLabel = UILabel()
-		let strataNameLabel = UILabel()
+		let logo = STLogoView(color: .label, height: 50)
+		let userNameLabel = STTitle(user.name)
+		let userEmailLabel = STSmallText(user.email ?? "(no email address)")
+		let userRoleLabel = STText(user.role == nil ? "No role" : user.role!.name)
+		let strataNameLabel = STText("\(user.strata == nil ? "No strata" : user.strata!.name)'s issues:")
 		
-		issueTableView = UITableView()
-		issueTableView.delegate = self
-		issueTableView.dataSource = self
+		issueTableView = STTableView(controller: self)
 		issueTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-		issueTableView.layer.borderColor = UIColor.tertiarySystemBackground.cgColor
-		issueTableView.layer.borderWidth = 2
-		issueTableView.layer.cornerRadius = 16
-		issueTableView.backgroundColor = .secondarySystemBackground
-		
-		userNameLabel.text = user.name
-		userEmailLabel.text = user.email
-		userRoleLabel.text = user.role == nil ? "No role" : user.role!.name
-		strataNameLabel.text = "\(user.strata == nil ? "No strata" : user.strata!.name)'s issues:"
-		
-		userNameLabel.font = UIFont.systemFont(ofSize: 32)
-		userEmailLabel.font = UIFont.systemFont(ofSize: 12)
-		userRoleLabel.font = UIFont.systemFont(ofSize: 18)
-		strataNameLabel.font = UIFont.systemFont(ofSize: 18)
-		
-		userEmailLabel.textColor = .secondaryLabel
 		
 		logo.translatesAutoresizingMaskIntoConstraints = false
 		userNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +87,6 @@ class UserIssuesScreenVC: UIViewController, UITableViewDelegate, UITableViewData
 		issues.count
 	}
 	
-	// TODO: - Show some real content
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { fatalError() }

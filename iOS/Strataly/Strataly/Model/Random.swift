@@ -25,7 +25,7 @@ extension User
 {
 	static func random() -> User
 	{
-		let prenames = ["Anthony", "Bethany", "Carl", "Denise", "Earl", "Fiona", "Gus", "Hannah", "Ian", "Jessica", "Ken", "Leah", "Maurice", "Natalie", "Otis", "Patricia", "Quincy", "Rachael", "Simon", "Thea", "Ugo", "Vanessa", "William", "Xena", "Ygor", "Zadie"]
+		let prenames = ["Anthony", "Bethany", "Carl", "Denise", "Earl", "Fiona", "Gustavo", "Hannah", "Ian", "Jessica", "Ken", "Leah", "Maurice", "Natalie", "Otis", "Patricia", "Quincy", "Rachael", "Simon", "Thea", "Ugo", "Vanessa", "William", "Xena", "Ygor", "Zadie"]
 		let surnames = ["Saldanha", "Gomes", "de la Croix", "McIntire", "Williamson", "Silva", "Gruber", "Steiner", "Novik", "Ivanov", "Dubois", "Horvat", "Olsen", "Roux", "O'Connor", "Bianco", "de Vries", "Rocha", "Machado", "Castro", "Navarro", "van Dijk"]
 		
 		let user = User(name: "\(prenames.randomElement()!) \(surnames.randomElement()!)")

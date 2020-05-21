@@ -19,16 +19,23 @@ class IssueScreenVC: UIViewController
         super.viewDidLoad()
 		view.backgroundColor = .systemBackground
 		
-		let title = UILabel()
-		title.text = issue?.title
+		let issueTitle = STSmallTitle(issue?.title)
+		let issueDescription = STLongText(text: issue?.description ?? "", maxWidth: Int(view.frame.width - 60))
 		
-		view.addSubview(title)
-		title.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(issueTitle)
+		view.addSubview(issueDescription)
+		issueTitle.translatesAutoresizingMaskIntoConstraints = false
+		issueDescription.translatesAutoresizingMaskIntoConstraints = false
 		
 		NSLayoutConstraint.activate([
-			title.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-			title.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-			title.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+			issueTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+			issueTitle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+			issueTitle.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -40),
+			
+			issueDescription.topAnchor.constraint(equalTo: issueTitle.bottomAnchor, constant: 10),
+			issueDescription.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+			issueDescription.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -40),
+			issueDescription.heightAnchor.constraint(equalToConstant: 250),
 		])
     }
 }

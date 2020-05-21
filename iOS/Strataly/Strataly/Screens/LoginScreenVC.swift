@@ -13,7 +13,7 @@ class LoginScreenVC: UIViewController
 	var coordinator: LoginCoordinator?
 	
 	private var block = UIView()
-	private var logo = LogoView(color: .mainScreenTitle)
+	private var logo = STLogoView(color: .mainScreenTitle)
 	
     override func viewDidLoad()
 	{

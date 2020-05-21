@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogoView: UIView
+class STLogoView: UIView
 {
 	init(color: UIColor, width: CGFloat, height: CGFloat)
 	{

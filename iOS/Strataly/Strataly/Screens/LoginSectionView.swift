@@ -22,9 +22,7 @@ class LoginSectionView: UIView
 		super.init(frame: frame)
 		backgroundColor = .systemBackground
 		
-		let emailLabel = UILabel()
-		emailLabel.text = "E-mail"
-		emailLabel.textAlignment = .natural
+		let emailLabel = STText("E-mail")
 		addSubview(emailLabel)
 		emailLabel.translatesAutoresizingMaskIntoConstraints = false
 		
@@ -36,9 +34,7 @@ class LoginSectionView: UIView
 		addSubview(emailTextField)
 		emailTextField.translatesAutoresizingMaskIntoConstraints = false
 		
-		let passwordLabel = UILabel()
-		passwordLabel.text = "Password"
-		passwordLabel.textAlignment = .natural
+		let passwordLabel = STText("Password")
 		addSubview(passwordLabel)
 		passwordLabel.translatesAutoresizingMaskIntoConstraints = false
 		
