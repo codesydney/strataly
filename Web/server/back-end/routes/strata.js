@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
     const dbResponse = await db.query('INSERT INTO strataly_schema.strata (strata_plan_id, strata_name, strata_address, office_address, office_email) VALUES ($1, $2, $3, $4, $5);', [strata_plan_id, strata_name, strata_address, office_address, office_email]);
     
     //Return status and success response
-    res.status(201).send('New strata added');
+    res.status(201).json(dbResponse);
 });
 
 //READ
@@ -74,7 +74,7 @@ router.delete('/:strata_plan_id', async (req, res) => {
     const dbResponse = await db.query('DELETE FROM strataly_schema.strata WHERE strata_plan_id = $1;', [id]);
 
     //return status & success response
-    res.status(200).send('strata deleted');
+    res.status(200).json(dbResponse);
 });
 
 /***********

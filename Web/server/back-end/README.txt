@@ -32,7 +32,7 @@ cURL:
 	the command line. 
 
 	POST:
-curl --data "strata_plan_id=3&strata_name=strata3&strata_address=3stratastreet&office_address=3officestreet&office_email=office@email.com" http://localhost:3000/api/strata
+curl --data "strata_plan_id=3&strata_name=strata3&strata_address=3stratastreet&office_address=3officestreet&office_email=office@email.com" http://localhost:5000/api/strata
 
 	DELETE:
-curl -X "DELETE" http://localhost:3000/api/strata/3
+curl -X "DELETE" http://localhost:5000/api/strata/3
