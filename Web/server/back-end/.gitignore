@@ -70,6 +70,10 @@ typings/
 .env
 .env.test
 
+# ssl certificate and private key
+ssl/server.cert
+ssl/server.key
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 

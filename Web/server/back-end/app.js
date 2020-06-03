@@ -3,6 +3,9 @@
  ************/
 const express = require('express');
 const mountRoutes = require('./routes');
+const ssl = require('./ssl');
+const http = require('http');
+const https = require('https');
 
 /**
  * Globals
@@ -13,6 +16,7 @@ const app = express();
 //PORT NUMBER
 // Gets port number from environment or use 5000 by default
 const PORT = process.env.PORT || 5000;
+const HTTPS_PORT = process.env.HTTPS_PORT || 443;
 
 /**
  * Server Setup
@@ -32,7 +36,12 @@ mountRoutes(app);
 /**
  * Listen
  */
-app.listen(PORT), console.log(`Listening on port ${PORT}...`);
+// HTTP server
+http.createServer(app).listen(PORT), console.log(`HTTP server listening on port ${PORT} ...`);
 
-//EXPORT
-module.exports = app;
+//HTTPS server
+//get self signed certificate
+const credentials = ssl.getCredentials();
+https.createServer(credentials, app).listen(HTTPS_PORT, () => {
+    console.log(`HTTPS server listening on port ${HTTPS_PORT}...`);
+})
