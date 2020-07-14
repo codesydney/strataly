@@ -1,8 +1,9 @@
 /************
  * Requires *
  ************/
-const express = require('express');
-const mountRoutes = require('./routes');
+const express = require("express");
+const auth = require("./auth");
+const mountRoutes = require("./routes");
 
 /**
  * Globals
@@ -22,6 +23,10 @@ app.use(express.json());
 // Set app to parse urlencoded payloads
 app.use(express.urlencoded({ extended: true }));
 
+/**
+ * Load Auth middleware
+ */
+//TODO: insert auth middleware
 
 /**
  * Routing
@@ -32,7 +37,7 @@ mountRoutes(app);
 /**
  * Listen
  */
-app.listen(PORT), console.log(`Listening on port ${PORT}...`);
+app.listen(PORT), console.log(`\nListening on port ${PORT}...`);
 
 //EXPORT
 module.exports = app;
