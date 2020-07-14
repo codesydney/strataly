@@ -10,7 +10,7 @@
  * Requires *
  ************/
 const roles = require('./roles');
-// const authentication = require('./authentication');
+const authentication = require('./authentication');
 const authorisation = require('./authorisation');
 
 /***********
@@ -18,6 +18,6 @@ const authorisation = require('./authorisation');
  ***********/
 
 module.exports = {
-  // authentication,
+  authentication,
   authorisation
 }

@@ -12,7 +12,7 @@ const Router = require("express-promise-router");
 //get database access script
 const db = require("../db");
 //get authorisation module
-const { authorisation: auth } = require('../auth');
+const { authentication: auth } = require('../auth');
 
 /*************
  * INSTANCES *

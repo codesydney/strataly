@@ -2,7 +2,6 @@
  * Requires *
  ************/
 const express = require("express");
-const auth = require("./auth");
 const mountRoutes = require("./routes");
 
 /**
@@ -10,10 +9,6 @@ const mountRoutes = require("./routes");
  */
 //instantiate express
 const app = express();
-
-//PORT NUMBER
-// Gets port number from environment or use 5000 by default
-const PORT = process.env.PORT || 5000;
 
 /**
  * Server Setup
@@ -24,19 +19,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /**
- * Load Auth middleware
- */
-//TODO: insert auth middleware
-
-/**
  * Routing
  */
 //Attach the url routes to the express app
 mountRoutes(app);
 
 /**
+ * Mount Global Error Handler
+ */
+//TODO: Create a global error handler
+
+/**
  * Listen
  */
+//PORT NUMBER
+// Gets port number from environment or use 5000 by default
+const PORT = process.env.PORT || 5000;
+//TODO: Change to HTTPS server when we have SSL. It is unsafe to send credential over standard HTTP.
 app.listen(PORT), console.log(`\nListening on port ${PORT}...`);
 
 //EXPORT
