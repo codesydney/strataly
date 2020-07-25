@@ -4,14 +4,14 @@
  * Description:
  *      Creates tail-end routes and queries for users table.
  *      Used by /routes/index.js to direct top level routing.
- *
  */
 /************
  * Requires *
  ************/
 const Router = require("express-promise-router");
-//get database access script
 const db = require("../db");
+const auth = require("../auth");
+const roles = require("../auth/roles");
 
 /*************
  * Instances *
@@ -24,29 +24,35 @@ const router = new Router();
 //Attach routing functions to router
 
 //CREATE
-router.post("/", async (req, res) => {
-  //Parse body for form-data
-  const {
-    user_email,
-    user_password,
-    user_name,
-    strata,
-    unit,
-    user_role,
-    user_status,
-  } = req.body;
+router.post("/",
+  auth.authentication.middlewareValidateJWT,
+  auth.authorisation.authorise([roles.Admin]),
+  async (req, res) => {
+    //Parse body for form-data
+    // const {
+    //   user_email,
+    //   user_password,
+    //   user_name,
+    //   strata,
+    //   unit,
+    //   user_role,
+    //   user_status,
+    // } = req.body;
 
-  console.log("\n--User Registration--");
-  console.log(user_email);
-  console.log(user_password);
-  console.log(user_name);
-  console.log(strata);
-  console.log(unit);
-  console.log(user_role);
-  console.log(user_status);
+    // console.log("\n--User Registration--");
+    // console.log(user_email);
+    // console.log(user_password);
+    // console.log(user_name);
+    // console.log(strata);
+    // console.log(unit);
+    // console.log(user_role);
+    // console.log(user_status);
 
-  res.status(401).json(req.body);
-});
+    // console.log("Role: ", req.user.role); //DELETEME
+
+    // res.status(401).json(req.body);
+    res.status(401).json({ message: 'SUCCESS!' });
+  });
 
 //READ
 // get all users

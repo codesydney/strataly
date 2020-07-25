@@ -1,7 +1,8 @@
 /**
- * TITLE: auth
- * DESC: authorisation module for
+ * TITLE: authentication.js
+ * DESC: authentication module for
  *  the server-side Strataly system.
+ *  Verifies user credentials and generates JWTs.
  *
  * DOCS: https://tools.ietf.org/html/rfc7519
  */
@@ -63,24 +64,50 @@ function generateJWT(userID, userRole) {
         role: userRole,
     };
 
-    // console.log("\nPayload: ", JSON.stringify(payload));
-
     //Get signed JWT - algorithm default==HS256
     // Currently using synchronous, but there is a callback option
     const signedJWT = jwt.sign(payload, secret);
-    // console.log("Secret: ", secret);
-    // console.log("JWT: ", signedJWT);
 
     return signedJWT;
 }
 
 //Verifies the jwt paramater as a valid JWT
 //if valid and in date, returns the decoded JWT
-//  else, returns a falsy value
+//  else, throws an error
 function validateJWT(userJWT) {
-    jwt.verify(userJWT, secret, (err, decoded) => {
-        return decoded;
-    });
+    //TODO: reimplement the asynchronous verification
+    // jwt.verify(userJWT, secret, (err, decoded) => {
+    //     return decoded;
+    // });
+    return jwt.verify(userJWT, secret); //TODO: catch error and handle depending on type. REF: jsonwebtoken on NPM
+}
+
+//Middleware version of validateJWT.
+// Gets required paramaters from req.
+// On success, attaches a user object,
+//  containing user role, to the req body.
+function middlewareValidateJWT(req, res, next) {
+    // Get the JWT from the header,
+    //  1. Split by any length of whitespace
+    //  2. Keep the JWT & discard the 'Bearer' prefixs
+    const userJWT = req.header("Authorization")
+        .split(/\s+/)
+        .pop();
+    const validated = validateJWT(userJWT);
+
+    if (!validated) {
+        //If validation failed, return authentication failed status code.
+        return res.status(401)
+            .json({ message: 'Unauthenticated' }); v
+    }
+
+    //- Authentication successful -
+    //Attach role to the request object.
+    //  This is used by the authorisation middleware 
+    //  to determine permissions.
+    //Pass to next function
+    req.user = { role: validated.role };
+    next();
 }
 
 /***********
@@ -89,4 +116,5 @@ function validateJWT(userJWT) {
 module.exports = {
     generateJWT,
     validateJWT,
+    middlewareValidateJWT,
 };
