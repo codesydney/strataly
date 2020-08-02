@@ -16,7 +16,7 @@ ENDPOINTS:
 			strata_plan_id, 
 			strata_name, 
 			strata_address,
-        		office_address, 
+        	office_address, 
 			office_email
 		
 		Get all strata - /API/strata
