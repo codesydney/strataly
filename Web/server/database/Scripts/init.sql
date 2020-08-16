@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS strataly_schema.strata(
     -- TODO: user_role needs a default?
 CREATE TABLE IF NOT EXISTS strataly_schema.users(
     user_id SERIAL PRIMARY KEY,
-    user_email TEXT NOT NULL, -- CHECK(),
+    user_email UNIQUE TEXT NOT NULL, -- CHECK(),
     user_password TEXT NOT NULL,
     user_name TEXT,
     strata TEXT NOT NULL REFERENCES strataly_schema.strata(strata_plan_id),

@@ -68,7 +68,7 @@ router.post("/", async (req, res) => {
       ),
     })
     : //Return failed authentication status and empty array
-    res.status(401).json(dbResponse.rows);
+    res.sendStatus(401);
   //The two res.xxxxxx... statements are twin exit points
 });
 
