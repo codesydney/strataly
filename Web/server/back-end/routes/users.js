@@ -5,81 +5,96 @@
  *      Creates tail-end routes and queries for users table.
  *      Used by /routes/index.js to direct top level routing.
  */
-/************
- * Requires *
- ************/
 const Router = require("express-promise-router");
 const db = require("../db");
 const auth = require("../auth");
-const roles = require("../auth/roles");
+const validate = auth.authentication.middlewareValidateJWT;
+const authorise = auth.authorisation.authorise;
+const {
+  Admin, Executive, Manager, Owner, Tenant
+} = require("../auth/roles");
 
-/*************
- * Instances *
- *************/
 const router = new Router();
 
-/**********
- * Routes *
- **********/
-//Attach routing functions to router
+//Permissions
+const create = [Admin, Executive];
+const readAll = [Admin, Executive];
+const readLimited = [Manager, Owner, Tenant];
+const update = [Admin, Executive, Manager, Owner, Tenant];
+const del = [Admin, Executive];
+router.post("/", validate, authorise(create), createUser);
+router.get("/", validate, authorise(readAll), readUsers);
+router.get("/:id", validate, authorise(readAll.concat(readLimited)), readUserByID);
+router.delete("/", validate, authorise(del), deleteUserByEmail);
+module.exports = router;
 
-//CREATE
-router.post("/",
-  auth.authentication.middlewareValidateJWT,
-  auth.authorisation.authorise([roles.Admin]),
-  async (req, res) => {
-    //Parse body for form-data
-    // const {
-    //   user_email,
-    //   user_password,
-    //   user_name,
-    //   strata,
-    //   unit,
-    //   user_role,
-    //   user_status,
-    // } = req.body;
+async function createUser(req, res, next) {
+  const {
+    user_email,
+    user_password,
+    user_name,
+    strata,
+    unit,
+    user_role,
+    user_status,
+  } = req.body;
 
-    // console.log("\n--User Registration--");
-    // console.log(user_email);
-    // console.log(user_password);
-    // console.log(user_name);
-    // console.log(strata);
-    // console.log(unit);
-    // console.log(user_role);
-    // console.log(user_status);
+  try {
+    const dbResponse = await db.query(
+      "INSERT INTO strataly_schema.users (user_id, user_email, user_password, user_name, strata, unit, user_role, user_status)(VALUES(DEFAULT, $1, $2, $3, $4, $5, $6, $7))",
+      [user_email, user_password, user_name, strata, unit, user_role, user_status]
+    );
 
-    // console.log("Role: ", req.user.role); //DELETEME
+    if (dbResponse.rowCount === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(201);
+    }
+  } catch (err) {
+    res.sendStatus(409);
+    return next();
+  }
+}
 
-    // res.status(401).json(req.body);
-    res.status(401).json({ message: 'SUCCESS!' });
-  });
-
-//READ
-// get all users
-router.get("/", async (req, res) => {
+async function readUsers(req, res) {
   const dbResponse = await db.query(
     "SELECT * FROM strataly_schema.users ORDER BY user_id ASC;"
   );
   res.status(200).json(dbResponse.rows);
-});
+}
 
-// get user by id
-router.get("/:user_id", async (req, res) => {
-  //Get requested id value
-  const usr_id = req.params.user_id;
+async function readUserByID(req, res) {
+  const currentUserRole = req.user.role;
+  const currentUserID = req.user.id;
+  const id = parseInt(req.params.id);
 
-  //Await query response
+  if (readAll.includes(currentUserRole) || currentUserID === id) {
+    const dbResponse = await db.query(
+      "SELECT * FROM strataly_schema.users WHERE user_id = $1;",
+      [id]
+    );
+
+    if (dbResponse.rows.length === 0) {
+      res.sendStatus(404);
+    } else {
+      res.status(200).json(dbResponse.rows);
+    }
+  } else {
+    res.sendStatus(403);
+  }
+};
+
+async function deleteUserByEmail(req, res) {
+  const { user_email } = req.body;
+
   const dbResponse = await db.query(
-    "SELECT * FROM strataly_schema.users WHERE user_id = $1;",
-    [usr_id]
+    "DELETE FROM strataly_schema.users WHERE user_email = $1;",
+    [user_email]
   );
 
-  //Return status & query response
-  res.status(200).json(dbResponse.rows);
-});
-
-/***********
- * EXPORTS *
- ***********/
-//Export router for mounting to app
-module.exports = router;
+  if (dbResponse.rowCount === 0) {
+    res.sendStatus(404);
+  } else {
+    res.sendStatus(200);
+  }
+};
