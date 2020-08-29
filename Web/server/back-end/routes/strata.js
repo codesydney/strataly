@@ -6,27 +6,29 @@
  *      Used by /routes/index.js to direct top level routing.
  *
  */
-/************
- * Requires *
- ************/
 const Router = require("express-promise-router");
-//get database access script
 const db = require("../db");
+const auth = require("../auth");
+const validate = auth.authentication.middlewareValidateJWT;
+const authorise = auth.authorisation.authorise;
+const {
+  Admin, Executive, Manager, Owner, Tenant
+} = require("../auth/roles");
 
-/*************
- * Instances *
- *************/
 const router = new Router();
 
-/**********
- * Routes *
- **********/
-//Attach routing functions to router
+//Permissions
+const create = [Admin, Executive];
+const read = [Admin, Executive, Manager, Owner, Tenant];
+const update = [Admin, Executive];
+const del = [Admin, Executive];
+router.post("/", validate, authorise(create), createStrata);
+router.get("/", validate, authorise(read), readStrata);
+router.get("/:strata_plan_id", validate, authorise(read), readStrataByID);
+router.delete("/:strata_plan_id", validate, authorise(del), deleteStrataByID);
+module.exports = router;
 
-//CREATE
-router.post("/", async (req, res) => {
-  //Parse urlencoded values
-  //TODO: This should probably be sent in the body as JSON
+async function createStrata(req, res, next) {
   const {
     strata_plan_id,
     strata_name,
@@ -35,62 +37,56 @@ router.post("/", async (req, res) => {
     office_email,
   } = req.body;
 
-  //Await Query response
+  try {
+    const dbResponse = await db.query(
+      "INSERT INTO strataly_schema.strata (strata_plan_id, strata_name, strata_address, office_address, office_email) VALUES ($1, $2, $3, $4, $5);",
+      [strata_plan_id, strata_name, strata_address, office_address, office_email]
+    );
+
+    if (dbResponse.rowCount === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(201)
+    }
+  } catch (err) {
+    res.sendStatus(409);
+    return next();
+  }
+}
+
+async function readStrata(req, res) {
   const dbResponse = await db.query(
-    "INSERT INTO strataly_schema.strata (strata_plan_id, strata_name, strata_address, office_address, office_email) VALUES ($1, $2, $3, $4, $5);",
-    [strata_plan_id, strata_name, strata_address, office_address, office_email]
+    "SELECT * FROM strataly_schema.strata;"
   );
-
-  //Return status and success response
-  res.status(201).json(dbResponse);
-});
-
-//READ
-//  get all strata
-router.get("/", async (req, res) => {
-  //Await Query response
-  const dbResponse = await db.query("SELECT * FROM strataly_schema.strata;");
-
-  //Return status & Query response
   res.status(200).json(dbResponse.rows);
-});
+}
 
-//  get strata by id
-router.get("/:strata_plan_id", async (req, res) => {
-  //Get request id value
+async function readStrataByID(req, res) {
   const id = req.params.strata_plan_id;
 
-  //Await query response
   const dbResponse = await db.query(
     "SELECT * FROM strataly_schema.strata WHERE strata_plan_id = $1;",
     [id]
   );
 
-  //return status & query response
-  res.status(200).json(dbResponse.rows);
-});
+  if (dbResponse.rows.length === 0) {
+    res.sendStatus(404);
+  } else {
+    res.status(200).json(dbResponse.rows);
+  }
+}
 
-//UPDATE
-//TODO: Add UPDATE endpoint/s
-
-//DELETE
-//  delete strata by id
-router.delete("/:strata_plan_id", async (req, res) => {
-  //Get strata id
+async function deleteStrataByID(req, res) {
   const id = req.params.strata_plan_id;
 
-  //Await query response
   const dbResponse = await db.query(
     "DELETE FROM strataly_schema.strata WHERE strata_plan_id = $1;",
     [id]
   );
 
-  //return status & success response
-  res.status(200).json(dbResponse);
-});
-
-/***********
- * EXPORTS *
- ***********/
-//Export router for mounting to app
-module.exports = router;
+  if (dbResponse.rowCount === 0) {
+    res.sendStatus(404);
+  } else {
+    res.sendStatus(200);
+  }
+}
