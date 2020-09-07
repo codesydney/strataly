@@ -106,7 +106,7 @@ function middlewareValidateJWT(req, res, next) {
     //  This is used by the authorisation middleware 
     //  to determine permissions.
     //Pass to next function
-    req.user = { role: validated.role };
+    req.user = { role: validated.role, id: validated.sub };
     next();
 }
 
