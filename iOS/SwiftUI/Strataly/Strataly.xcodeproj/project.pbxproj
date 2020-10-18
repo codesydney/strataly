@@ -7,27 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C0E7C4C2505D8E600D6CCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E7C4B2505D8E600D6CCA1 /* AppDelegate.swift */; };
-		9C0E7C4E2505D8E600D6CCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E7C4D2505D8E600D6CCA1 /* SceneDelegate.swift */; };
-		9C0E7C502505D8E600D6CCA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E7C4F2505D8E600D6CCA1 /* ContentView.swift */; };
-		9C0E7C522505D8ED00D6CCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7C512505D8ED00D6CCA1 /* Assets.xcassets */; };
-		9C0E7C552505D8ED00D6CCA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7C542505D8ED00D6CCA1 /* Preview Assets.xcassets */; };
-		9C0E7C582505D8ED00D6CCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7C562505D8ED00D6CCA1 /* LaunchScreen.storyboard */; };
+		9C96C329253BAB9500F14CC7 /* StratalyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96C328253BAB9500F14CC7 /* StratalyApp.swift */; };
+		9C96C32B253BAB9500F14CC7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96C32A253BAB9500F14CC7 /* LoginView.swift */; };
+		9C96C32D253BAB9800F14CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C96C32C253BAB9800F14CC7 /* Assets.xcassets */; };
+		9C96C330253BAB9800F14CC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C96C32F253BAB9800F14CC7 /* Preview Assets.xcassets */; };
+		9C96C33B253BAB9800F14CC7 /* StratalyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96C33A253BAB9800F14CC7 /* StratalyTests.swift */; };
+		9C96C346253BAB9800F14CC7 /* StratalyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96C345253BAB9800F14CC7 /* StratalyUITests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C96C337253BAB9800F14CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C96C31D253BAB9500F14CC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C96C324253BAB9500F14CC7;
+			remoteInfo = Strataly;
+		};
+		9C96C342253BAB9800F14CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C96C31D253BAB9500F14CC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C96C324253BAB9500F14CC7;
+			remoteInfo = Strataly;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		9C0E7C482505D8E600D6CCA1 /* Strataly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strataly.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0E7C4B2505D8E600D6CCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C0E7C4D2505D8E600D6CCA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C0E7C4F2505D8E600D6CCA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9C0E7C512505D8ED00D6CCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9C0E7C542505D8ED00D6CCA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9C0E7C572505D8ED00D6CCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C0E7C592505D8ED00D6CCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C96C325253BAB9500F14CC7 /* Strataly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strataly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C96C328253BAB9500F14CC7 /* StratalyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratalyApp.swift; sourceTree = "<group>"; };
+		9C96C32A253BAB9500F14CC7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9C96C32C253BAB9800F14CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C96C32F253BAB9800F14CC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C96C331253BAB9800F14CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C96C336253BAB9800F14CC7 /* StratalyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StratalyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C96C33A253BAB9800F14CC7 /* StratalyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratalyTests.swift; sourceTree = "<group>"; };
+		9C96C33C253BAB9800F14CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C96C341253BAB9800F14CC7 /* StratalyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StratalyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C96C345253BAB9800F14CC7 /* StratalyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratalyUITests.swift; sourceTree = "<group>"; };
+		9C96C347253BAB9800F14CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C0E7C452505D8E600D6CCA1 /* Frameworks */ = {
+		9C96C322253BAB9500F14CC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C333253BAB9800F14CC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C33E253BAB9800F14CC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,54 +72,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C0E7C3F2505D8E600D6CCA1 = {
+		9C96C31C253BAB9500F14CC7 = {
 			isa = PBXGroup;
 			children = (
-				9C0E7C4A2505D8E600D6CCA1 /* Strataly */,
-				9C0E7C492505D8E600D6CCA1 /* Products */,
+				9C96C327253BAB9500F14CC7 /* Strataly */,
+				9C96C339253BAB9800F14CC7 /* StratalyTests */,
+				9C96C344253BAB9800F14CC7 /* StratalyUITests */,
+				9C96C326253BAB9500F14CC7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9C0E7C492505D8E600D6CCA1 /* Products */ = {
+		9C96C326253BAB9500F14CC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C0E7C482505D8E600D6CCA1 /* Strataly.app */,
+				9C96C325253BAB9500F14CC7 /* Strataly.app */,
+				9C96C336253BAB9800F14CC7 /* StratalyTests.xctest */,
+				9C96C341253BAB9800F14CC7 /* StratalyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C0E7C4A2505D8E600D6CCA1 /* Strataly */ = {
+		9C96C327253BAB9500F14CC7 /* Strataly */ = {
 			isa = PBXGroup;
 			children = (
-				9C0E7C4B2505D8E600D6CCA1 /* AppDelegate.swift */,
-				9C0E7C4D2505D8E600D6CCA1 /* SceneDelegate.swift */,
-				9C0E7C4F2505D8E600D6CCA1 /* ContentView.swift */,
-				9C0E7C512505D8ED00D6CCA1 /* Assets.xcassets */,
-				9C0E7C562505D8ED00D6CCA1 /* LaunchScreen.storyboard */,
-				9C0E7C592505D8ED00D6CCA1 /* Info.plist */,
-				9C0E7C532505D8ED00D6CCA1 /* Preview Content */,
+				9C96C328253BAB9500F14CC7 /* StratalyApp.swift */,
+				9C96C32A253BAB9500F14CC7 /* LoginView.swift */,
+				9C96C32C253BAB9800F14CC7 /* Assets.xcassets */,
+				9C96C331253BAB9800F14CC7 /* Info.plist */,
+				9C96C32E253BAB9800F14CC7 /* Preview Content */,
 			);
 			path = Strataly;
 			sourceTree = "<group>";
 		};
-		9C0E7C532505D8ED00D6CCA1 /* Preview Content */ = {
+		9C96C32E253BAB9800F14CC7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				9C0E7C542505D8ED00D6CCA1 /* Preview Assets.xcassets */,
+				9C96C32F253BAB9800F14CC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C96C339253BAB9800F14CC7 /* StratalyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C96C33A253BAB9800F14CC7 /* StratalyTests.swift */,
+				9C96C33C253BAB9800F14CC7 /* Info.plist */,
+			);
+			path = StratalyTests;
+			sourceTree = "<group>";
+		};
+		9C96C344253BAB9800F14CC7 /* StratalyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C96C345253BAB9800F14CC7 /* StratalyUITests.swift */,
+				9C96C347253BAB9800F14CC7 /* Info.plist */,
+			);
+			path = StratalyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C0E7C472505D8E600D6CCA1 /* Strataly */ = {
+		9C96C324253BAB9500F14CC7 /* Strataly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C0E7C5C2505D8ED00D6CCA1 /* Build configuration list for PBXNativeTarget "Strataly" */;
+			buildConfigurationList = 9C96C34A253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "Strataly" */;
 			buildPhases = (
-				9C0E7C442505D8E600D6CCA1 /* Sources */,
-				9C0E7C452505D8E600D6CCA1 /* Frameworks */,
-				9C0E7C462505D8E600D6CCA1 /* Resources */,
+				9C96C321253BAB9500F14CC7 /* Sources */,
+				9C96C322253BAB9500F14CC7 /* Frameworks */,
+				9C96C323253BAB9500F14CC7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,25 +147,68 @@
 			);
 			name = Strataly;
 			productName = Strataly;
-			productReference = 9C0E7C482505D8E600D6CCA1 /* Strataly.app */;
+			productReference = 9C96C325253BAB9500F14CC7 /* Strataly.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9C96C335253BAB9800F14CC7 /* StratalyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C96C34D253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "StratalyTests" */;
+			buildPhases = (
+				9C96C332253BAB9800F14CC7 /* Sources */,
+				9C96C333253BAB9800F14CC7 /* Frameworks */,
+				9C96C334253BAB9800F14CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C96C338253BAB9800F14CC7 /* PBXTargetDependency */,
+			);
+			name = StratalyTests;
+			productName = StratalyTests;
+			productReference = 9C96C336253BAB9800F14CC7 /* StratalyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C96C340253BAB9800F14CC7 /* StratalyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C96C350253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "StratalyUITests" */;
+			buildPhases = (
+				9C96C33D253BAB9800F14CC7 /* Sources */,
+				9C96C33E253BAB9800F14CC7 /* Frameworks */,
+				9C96C33F253BAB9800F14CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C96C343253BAB9800F14CC7 /* PBXTargetDependency */,
+			);
+			name = StratalyUITests;
+			productName = StratalyUITests;
+			productReference = 9C96C341253BAB9800F14CC7 /* StratalyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9C0E7C402505D8E600D6CCA1 /* Project object */ = {
+		9C96C31D253BAB9500F14CC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
-				ORGANIZATIONNAME = "Gustavo Eulalio";
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					9C0E7C472505D8E600D6CCA1 = {
-						CreatedOnToolsVersion = 11.7;
+					9C96C324253BAB9500F14CC7 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					9C96C335253BAB9800F14CC7 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 9C96C324253BAB9500F14CC7;
+					};
+					9C96C340253BAB9800F14CC7 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 9C96C324253BAB9500F14CC7;
 					};
 				};
 			};
-			buildConfigurationList = 9C0E7C432505D8E600D6CCA1 /* Build configuration list for PBXProject "Strataly" */;
+			buildConfigurationList = 9C96C320253BAB9500F14CC7 /* Build configuration list for PBXProject "Strataly" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,55 +216,87 @@
 				en,
 				Base,
 			);
-			mainGroup = 9C0E7C3F2505D8E600D6CCA1;
-			productRefGroup = 9C0E7C492505D8E600D6CCA1 /* Products */;
+			mainGroup = 9C96C31C253BAB9500F14CC7;
+			productRefGroup = 9C96C326253BAB9500F14CC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C0E7C472505D8E600D6CCA1 /* Strataly */,
+				9C96C324253BAB9500F14CC7 /* Strataly */,
+				9C96C335253BAB9800F14CC7 /* StratalyTests */,
+				9C96C340253BAB9800F14CC7 /* StratalyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C0E7C462505D8E600D6CCA1 /* Resources */ = {
+		9C96C323253BAB9500F14CC7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0E7C582505D8ED00D6CCA1 /* LaunchScreen.storyboard in Resources */,
-				9C0E7C552505D8ED00D6CCA1 /* Preview Assets.xcassets in Resources */,
-				9C0E7C522505D8ED00D6CCA1 /* Assets.xcassets in Resources */,
+				9C96C330253BAB9800F14CC7 /* Preview Assets.xcassets in Resources */,
+				9C96C32D253BAB9800F14CC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C334253BAB9800F14CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C33F253BAB9800F14CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C0E7C442505D8E600D6CCA1 /* Sources */ = {
+		9C96C321253BAB9500F14CC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0E7C4C2505D8E600D6CCA1 /* AppDelegate.swift in Sources */,
-				9C0E7C4E2505D8E600D6CCA1 /* SceneDelegate.swift in Sources */,
-				9C0E7C502505D8E600D6CCA1 /* ContentView.swift in Sources */,
+				9C96C32B253BAB9500F14CC7 /* LoginView.swift in Sources */,
+				9C96C329253BAB9500F14CC7 /* StratalyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C332253BAB9800F14CC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C96C33B253BAB9800F14CC7 /* StratalyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96C33D253BAB9800F14CC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C96C346253BAB9800F14CC7 /* StratalyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		9C0E7C562505D8ED00D6CCA1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C0E7C572505D8ED00D6CCA1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		9C96C338253BAB9800F14CC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C96C324253BAB9500F14CC7 /* Strataly */;
+			targetProxy = 9C96C337253BAB9800F14CC7 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+		9C96C343253BAB9800F14CC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C96C324253BAB9500F14CC7 /* Strataly */;
+			targetProxy = 9C96C342253BAB9800F14CC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		9C0E7C5A2505D8ED00D6CCA1 /* Debug */ = {
+		9C96C348253BAB9800F14CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -192,6 +322,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -216,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +357,7 @@
 			};
 			name = Debug;
 		};
-		9C0E7C5B2505D8ED00D6CCA1 /* Release */ = {
+		9C96C349253BAB9800F14CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -252,6 +383,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,15 +412,17 @@
 			};
 			name = Release;
 		};
-		9C0E7C5D2505D8ED00D6CCA1 /* Debug */ = {
+		9C96C34B253BAB9800F14CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Strataly/Preview Content\"";
 				DEVELOPMENT_TEAM = K3J3HR7T76;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Strataly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,15 +434,17 @@
 			};
 			name = Debug;
 		};
-		9C0E7C5E2505D8ED00D6CCA1 /* Release */ = {
+		9C96C34C253BAB9800F14CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Strataly/Preview Content\"";
 				DEVELOPMENT_TEAM = K3J3HR7T76;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Strataly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,28 +456,130 @@
 			};
 			name = Release;
 		};
+		9C96C34E253BAB9800F14CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strataly.app/Strataly";
+			};
+			name = Debug;
+		};
+		9C96C34F253BAB9800F14CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strataly.app/Strataly";
+			};
+			name = Release;
+		};
+		9C96C351253BAB9800F14CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Strataly;
+			};
+			name = Debug;
+		};
+		9C96C352253BAB9800F14CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3J3HR7T76;
+				INFOPLIST_FILE = StratalyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustavoeulalio.StratalyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Strataly;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C0E7C432505D8E600D6CCA1 /* Build configuration list for PBXProject "Strataly" */ = {
+		9C96C320253BAB9500F14CC7 /* Build configuration list for PBXProject "Strataly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C0E7C5A2505D8ED00D6CCA1 /* Debug */,
-				9C0E7C5B2505D8ED00D6CCA1 /* Release */,
+				9C96C348253BAB9800F14CC7 /* Debug */,
+				9C96C349253BAB9800F14CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C0E7C5C2505D8ED00D6CCA1 /* Build configuration list for PBXNativeTarget "Strataly" */ = {
+		9C96C34A253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "Strataly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C0E7C5D2505D8ED00D6CCA1 /* Debug */,
-				9C0E7C5E2505D8ED00D6CCA1 /* Release */,
+				9C96C34B253BAB9800F14CC7 /* Debug */,
+				9C96C34C253BAB9800F14CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C96C34D253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "StratalyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C96C34E253BAB9800F14CC7 /* Debug */,
+				9C96C34F253BAB9800F14CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C96C350253BAB9800F14CC7 /* Build configuration list for PBXNativeTarget "StratalyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C96C351253BAB9800F14CC7 /* Debug */,
+				9C96C352253BAB9800F14CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9C0E7C402505D8E600D6CCA1 /* Project object */;
+	rootObject = 9C96C31D253BAB9500F14CC7 /* Project object */;
 }
